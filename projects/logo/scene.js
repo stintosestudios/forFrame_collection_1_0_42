@@ -9,11 +9,25 @@ scene({
     parts : [{
             id : 'for',
             w : 128,
-            h : 32
+            h : 32,
+            skin : {
+
+                imgIndex : 0,
+                w : 128,
+                h : 32
+
+            }
         }, {
             id : 'Frame',
             w : 128,
-            h : 32
+            h : 32,
+            skin : {
+
+                imgIndex : 1,
+                w : 128,
+                h : 32
+
+            }
         }
 
     ],
@@ -32,15 +46,17 @@ scene({
 
                 pt.x = 200 * this.sectionPer;
                 pt.y = 224;
-                pt.w = 128;
+                pt.w = 128 * this.sectionPer;
                 pt.h = 32;
+                pt.radian = 0;
 
                 pt = this.parts['Frame'];
 
                 pt.x = 529 - 200 * this.sectionPer;
                 pt.y = 224;
-                pt.w = 128;
+                pt.w = 128 * this.sectionPer;
                 pt.h = 32;
+                pt.radian = 0;
 
             },
 
@@ -52,6 +68,7 @@ scene({
                 pt.y = 224;
                 pt.w = 128;
                 pt.h = 32;
+                pt.radian = 0;
 
                 pt = this.parts['Frame'];
 
@@ -59,6 +76,7 @@ scene({
                 pt.y = 224;
                 pt.w = 128;
                 pt.h = 32;
+                pt.radian = 0;
 
             },
 
@@ -73,6 +91,7 @@ scene({
                 pt.y = 224 - hSize * bias;
                 pt.w = 128 + size * bias;
                 pt.h = 32 + size * bias;
+                pt.radian = 0.5 * bias;
 
                 pt = this.parts['Frame'];
 
@@ -80,6 +99,8 @@ scene({
                 pt.y = 224 - hSize * bias;
                 pt.w = 128 + size * bias;
                 pt.h = 32 + size * bias;
+                pt.radian = -0.5 * bias;
+
             },
 
             back : function () {
@@ -88,15 +109,17 @@ scene({
 
                 pt.x = 200 - 200 * this.sectionPer;
                 pt.y = 240 - 16;
-                pt.w = 128;
+                pt.w = 128 - 128 * this.sectionPer;
                 pt.h = 32;
+                pt.radian = 0;
 
                 pt = this.parts['Frame'];
 
                 pt.x = 329 + 200 * this.sectionPer;
                 pt.y = 240 - 16;
-                pt.w = 128;
+                pt.w = 128 - 128 * this.sectionPer;
                 pt.h = 32;
+                pt.radian = 0;
 
             }
 
@@ -120,7 +143,53 @@ scene.injectCanvas('apparea');
 
 //scene.renderFrame();
 
-// play the scene
-scene.play({
-    frameRate : 10
+scene.load(['img/for.png', 'img/frame.png'], function (progress) {
+
+    if (progress === 1) {
+
+        // play the scene
+        scene.play({
+
+            appendRender : function (ctx) {
+
+                var x = 0,
+                y = 0,
+                size = 256,
+                bias = Math.abs((0.5 - this.percentDone) / 0.5);
+                space = 5 + 30 * bias;
+
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(0, 0, 640, 480);
+                ctx.strokeStyle = '#000000';
+
+                ctx.save();
+                ctx.translate(20,0);
+                //ctx.rotate(0.5 * bias);
+                while (y < 5) {
+
+                    x = 0;
+                    while (x < 5) {
+
+                        ctx.strokeRect(
+                            x * (size + space) + (320 - size * 5 / 2) - space * 5 / 2,
+                            y * (size + space) + (240 - size * 5 / 2) - space * 5 / 2,
+                            size,
+                            size);
+
+                        x += 1;
+
+                    }
+
+                    y += 1;
+
+                }
+                ctx.restore();
+
+            },
+            appendZ : 0,
+            frameRate : 10
+        });
+
+    }
+
 });
