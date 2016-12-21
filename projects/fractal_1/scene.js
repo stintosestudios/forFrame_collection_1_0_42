@@ -51,51 +51,24 @@ scene({
 
         },
         d;
-
-
         while (pi < pLen) {
 
             part = this.parts['box' + pi];
 
             // find the center point on the curve
-            cx = 640 / pLen * (pi+1) - (640 / pLen * this.percentDone);
-            cy = (480-64) - Math.pow( 20 / pLen * (pi - 1 * this.percentDone) ,2);
+            cx = 640 / pLen * (pi + 1) - (640 / pLen * this.percentDone);
+            cy = (480 - 100) - Math.pow(30 / pLen * (pi - 1 * this.percentDone), 2);
 
-            part.w = 128;
-            part.h = 128;
+            size = 200 - distance(cx, cy, 0, 480) / 800 * 200;
+
+            part.w = size;
+            part.h = size;
             part.x = cx - part.w / 2;
             part.y = cy - part.h / 2;
 
             pi += 1;
 
         }
-
-        /*
-        var pi = 0,
-        pLen = Object.keys(this.parts).length,
-        part,
-        bias = Math.abs(0.5 - this.percentDone) / 0.5,
-        size, // part size
-        n; // I don't know what to call it so it is just 'n'
-        while (pi < pLen) {
-
-        part = this.parts['box' + pi];
-
-        n = pLen * this.percentDone / (pi + 1) / (pLen / 2);
-        // size
-        size = 128 - 128 * n;
-
-        part.w = size;
-        part.h = size;
-
-        part.x = pi * 64;
-        part.y = 480 - (part.h);
-
-        pi += 1;
-
-        }
-
-         */
 
     }
 
@@ -106,31 +79,6 @@ scene.injectCanvas('apparea');
 
 scene.play({
 
-    appendRender : function (ctx) {
-
-        var x = 0,
-        y = 380,
-        i;
-
-        ctx.strokeStyle = '#00ff00';
-
-        i = 0;
-        while (i < this.maxFrame) {
-
-            ctx.beginPath();
-            ctx.moveTo(x, y);
-
-            x = 640 / this.maxFrame * (i + 1);
-            y = 380 - Math.pow(20 / this.maxFrame * i, 2);
-
-            ctx.lineTo(x, y);
-            ctx.closePath();
-            ctx.stroke();
-
-            i += 1;
-
-        }
-
-    }
+    appendRender : function (ctx) {}
 
 });
