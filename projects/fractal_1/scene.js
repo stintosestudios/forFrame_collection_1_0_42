@@ -66,7 +66,7 @@ scene({
             part.x = cx - part.w / 2;
             part.y = cy - part.h / 2;
 
-            part.radian = 1.57 * this.percentDone;
+            part.radian = 1.57 * this.percentDone + Math.PI / pLen * (pi - 1 * this.percentDone);
 
             pi += 1;
 
