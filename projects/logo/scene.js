@@ -28,6 +28,16 @@ scene({
                 h : 32
 
             }
+        }, {
+            id : 'logo',
+            w : 128,
+            h : 56,
+            skin : {
+                imgIndex : 2,
+                w : 128,
+                h : 56
+            }
+
         }
 
     ],
@@ -130,6 +140,10 @@ scene({
     // define the forFrame movement
     forFrame : function () {
 
+        var part = this.parts['logo'];
+        part.x = 640 - 128;
+        part.y = 480 - 56;
+
         this.currentSection();
 
     }
@@ -143,12 +157,13 @@ scene.injectCanvas('apparea');
 
 //scene.renderFrame();
 
-scene.load(['img/for.png', 'img/frame.png'], function (progress) {
+scene.load(['img/for.png', 'img/frame.png', '../mylogo_128.png'], function (progress) {
 
     if (progress === 1) {
 
         // play the scene
         scene.play({
+            //scene.toPNGCollection({
 
             appendRender : function (ctx) {
 
@@ -163,7 +178,7 @@ scene.load(['img/for.png', 'img/frame.png'], function (progress) {
                 ctx.strokeStyle = '#000000';
 
                 ctx.save();
-                ctx.translate(20,0);
+                ctx.translate(20, 0);
                 //ctx.rotate(0.5 * bias);
                 while (y < 5) {
 
