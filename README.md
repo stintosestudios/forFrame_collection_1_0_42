@@ -12,7 +12,7 @@ This repository is a collection of animations made with the help of my HTML 5 an
 
 ## Future Additions
 
-While useing a current version of forFrame it is exspected that I will run into shortcomings with the framwork in terms of additional features that I would like to have in the framework, as well as minor mistakes. The following is a list of changes I would like to include in the next minor release of forFrame.
+While using a current version of forFrame it is expected that I will run into shortcomings with the framework in terms of additional features that I would like to have in the framework, as well as minor mistakes. The following is a list of changes I would like to include in the next minor release of forFrame.
 
 ### New features
 
