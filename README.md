@@ -7,6 +7,7 @@ This repository is a collection of animations made with the help of my HTML 5 an
 ## Projects
 
 [logo](https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/logo)
+
 [fractal_1](https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/fractal_1)
 
 ## Future Additions
@@ -23,6 +24,6 @@ I would like to add a feature where I can just add an object that contains at le
 
 So I have what I call appendRender methods for scene.play, and scene.toPNGCollection. However it would be nice to have such methods as an option in place of an image so I can skin a part by way of javascript when doing so is called for.
 
-## Bug's to fix
+### Bug's to fix
 
 Adding static x, and y values for parts should work.
