@@ -6,6 +6,8 @@ This repository is a collection of animations made with the help of my HTML 5 an
 
 ## Projects
 
+The following are image links to the projects in the collection. Each one should have a neasted README file.
+
 <div>
 
     <a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/logo"><img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/logo/thum_128.png"></a>
