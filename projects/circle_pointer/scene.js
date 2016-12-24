@@ -39,6 +39,14 @@ scene({
             id : 'point:5',
             w : 64,
             h : 64
+        }, {
+            id : 'point:6',
+            w : 64,
+            h : 64
+        }, {
+            id : 'point:7',
+            w : 64,
+            h : 64
         }
 
     ],
@@ -46,11 +54,16 @@ scene({
     // define the forFrame movement
     forFrame : function () {
 
-        var part = this.parts['logo'],
+        var part,
         self = this,
-        radius = 128,
-        radOffset = Math.PI * 2 * this.percentDone;
+        radius = 175,
+        size,
+        pointLen = 8,
+        pointer,
+        bias = Math.abs(.5 - this.percentDone) / .5;
 
+        // ajust the logo
+        part = this.parts['logo'];
         part.x = 640 - 128;
         part.y = 480 - 56;
 
@@ -61,13 +74,19 @@ scene({
 
             // get the part
             part = self.parts[id];
+
             // is it a point?
             if (part.id.indexOf('point:') != -1) {
 
+                pointer = pointLen * bias;
                 pointIndex = part.id.split(':')[1];
 
-                part.x = Math.cos(Math.PI * 2 / 6 * pointIndex) * radius + 320 - (part.w / 2);
-                part.y = Math.sin(Math.PI * 2 / 6 * pointIndex) * radius + 240 - (part.h / 2);
+                size = 4 + 96 * (Math.abs(pointer - pointIndex) / pointLen);
+
+                part.w = size;
+                part.h = size;
+                part.x = Math.cos(Math.PI * 2 / pointLen * pointIndex) * radius + 320 - (part.w / 2);
+                part.y = Math.sin(Math.PI * 2 / pointLen * pointIndex) * radius + 240 - (part.h / 2);
 
             }
 
@@ -87,15 +106,13 @@ scene.load(['../mylogo_128.png'], function (progress) {
         //scene.setFrame(0);
         //scene.renderFrame();
 
-        
-        scene.play({
-        //scene.toPNGCollection({
 
-        appendRender : function (ctx) {}
+        scene.play({
+            //scene.toPNGCollection({
+
+            appendRender : function (ctx) {}
 
         });
-
-        
 
     }
 
