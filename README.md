@@ -6,7 +6,10 @@ This repository is a collection of animations made with the help of my HTML 5 an
 
 ## Projects
 
-[logo](https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/logo)
+<a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/logo">
+
+<img src="https://github.com/stintosestudios/forFrame_collection_1_0_42/blob/master/projects/logo/gifs/gif_1_320.gif?raw=true">
+</a>
 
 [fractal_1](https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/fractal_1)
 
