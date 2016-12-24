@@ -8,7 +8,7 @@ This repository is a collection of animations made with the help of my HTML 5 an
 
 <a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/logo">
 
-<img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/logo/gifs/gif_1_320.gif">
+<img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/logo/thum_128.png">
 </a>
 
 [fractal_1](https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/fractal_1)
