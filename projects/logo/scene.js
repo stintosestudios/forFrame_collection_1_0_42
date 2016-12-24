@@ -162,8 +162,8 @@ scene.load(['img/for.png', 'img/frame.png', '../mylogo_128.png'], function (prog
     if (progress === 1) {
 
         // play the scene
-        //scene.play({
-        scene.toPNGCollection({
+        scene.play({
+        //scene.toPNGCollection({
 
             appendRender : function (ctx) {
 
