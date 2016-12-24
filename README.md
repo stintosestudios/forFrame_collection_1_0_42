@@ -9,8 +9,8 @@ This repository is a collection of animations made with the help of my HTML 5 an
 <div>
 
     <a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/logo"><img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/logo/thum_128.png"></a>
-
     <a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/fractal_1"><img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/fractal_1/thum_128.png"></a>
+    <a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/circle_pointer"><img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/circle_pointer/thum_128.png"></a>
 
 </div>
 
