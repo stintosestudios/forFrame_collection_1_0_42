@@ -107,8 +107,8 @@ scene.load(['../mylogo_128.png'], function (progress) {
         //scene.renderFrame();
 
 
-        scene.play({
-            //scene.toPNGCollection({
+        //scene.play({
+        scene.toPNGCollection({
 
             appendRender : function (ctx) {}
 
