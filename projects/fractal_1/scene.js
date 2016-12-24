@@ -79,7 +79,8 @@ scene({
 // inject a canvas into the given id.
 scene.injectCanvas('apparea');
 
-scene.play({
+//scene.play({
+scene.toPNGCollection({
 
     appendRender : function (ctx) {}
 
