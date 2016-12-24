@@ -161,51 +161,10 @@ scene.load(['img/for.png', 'img/frame.png', '../mylogo_128.png'], function (prog
 
     if (progress === 1) {
 
-	   scene.setFrame(25);
-	
-        scene.renderFrame(function (ctx) {
-
-            var x = 0,
-            y = 0,
-            size = 256,
-            bias = Math.abs((0.5 - this.percentDone) / 0.5);
-            space = 5 + 30 * bias;
-
-            ctx.fillStyle = '#ffffff';
-            ctx.fillRect(0, 0, 640, 480);
-            ctx.strokeStyle = '#000000';
-
-            ctx.save();
-            ctx.translate(20, 0);
-            //ctx.rotate(0.5 * bias);
-            while (y < 5) {
-
-                x = 0;
-                while (x < 5) {
-
-                    ctx.strokeRect(
-                        x * (size + space) + (320 - size * 5 / 2) - space * 5 / 2,
-                        y * (size + space) + (240 - size * 5 / 2) - space * 5 / 2,
-                        size,
-                        size);
-
-                    x += 1;
-
-                }
-
-                y += 1;
-
-            }
-            ctx.restore();
-
-        }, 0);
-
-        // play the scene
         /*
-        scene.play({
-        //scene.toPNGCollection({
+        scene.setFrame(25);
 
-        appendRender : function (ctx) {
+        scene.renderFrame(function (ctx) {
 
         var x = 0,
         y = 0,
@@ -240,11 +199,53 @@ scene.load(['img/for.png', 'img/frame.png', '../mylogo_128.png'], function (prog
         }
         ctx.restore();
 
-        },
-        appendZ : 0,
-        frameRate : 10
-        });
+        }, 0);
          */
+
+        // play the scene
+
+        scene.play({
+            //scene.toPNGCollection({
+
+            appendRender : function (ctx) {
+
+                var x = 0,
+                y = 0,
+                size = 256,
+                bias = Math.abs((0.5 - this.percentDone) / 0.5);
+                space = 5 + 30 * bias;
+
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(0, 0, 640, 480);
+                ctx.strokeStyle = '#000000';
+
+                ctx.save();
+                ctx.translate(20, 0);
+                //ctx.rotate(0.5 * bias);
+                while (y < 5) {
+
+                    x = 0;
+                    while (x < 5) {
+
+                        ctx.strokeRect(
+                            x * (size + space) + (320 - size * 5 / 2) - space * 5 / 2,
+                            y * (size + space) + (240 - size * 5 / 2) - space * 5 / 2,
+                            size,
+                            size);
+
+                        x += 1;
+
+                    }
+
+                    y += 1;
+
+                }
+                ctx.restore();
+
+            },
+            appendZ : 0,
+            frameRate : 10
+        });
 
     }
 

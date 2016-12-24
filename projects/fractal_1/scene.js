@@ -30,6 +30,15 @@ scene({
             id : 'box5',
             w : 64,
             h : 64
+        }, {
+            id : 'logo', // logo
+            w : 128,
+            h : 56,
+            skin : {
+                imgIndex : 0,
+                w : 128,
+                h : 56
+            }
         }
 
     ],
@@ -51,7 +60,12 @@ scene({
 
         },
         d;
-        while (pi < pLen) {
+
+        part = this.parts['logo'];
+        part.x = 640 - 128;
+        part.y = 480 - 56;
+
+        while (pi < pLen - 1) { // -1 because of logo
 
             part = this.parts['box' + pi];
 
@@ -79,9 +93,17 @@ scene({
 // inject a canvas into the given id.
 scene.injectCanvas('apparea');
 
-//scene.play({
-scene.toPNGCollection({
+scene.load(['../mylogo_128.png'], function (progress) {
 
-    appendRender : function (ctx) {}
+    if (progress === 1) {
+
+        scene.play({
+        //scene.toPNGCollection({
+
+            appendRender : function (ctx) {}
+
+        });
+
+    }
 
 });
