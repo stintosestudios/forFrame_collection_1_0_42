@@ -128,7 +128,7 @@ scene.load(['../mylogo_128.png'], function (progress) {
     if (progress === 1) {
 
         scene.play({
-            //scene.toPNGCollection({
+        //    scene.toPNGCollection({
 
         });
 
