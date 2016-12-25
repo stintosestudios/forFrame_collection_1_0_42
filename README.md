@@ -44,6 +44,10 @@ Although the method of starting chrome with loose security settings works, a bet
 
 A method that injects a user interface that allows for playback, jump to frame, export to png collection functions among other things. This will be nice as it will allow for me to just use that to provide everything I want when working with an animation in a simple UI, so I do not have to keep changing my code around.
 
+* skin options
+
+I should be able to set static sx,sy,w,and,h values in the options object that i define in my parts array.
+
 * opacity
 
 add an opacity value to parts, and make the necessary change to the render method to allow for opacity effects.
