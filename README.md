@@ -14,6 +14,8 @@ The following are image links to the projects in the collection. Each one should
     <a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/fractal_1"><img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/fractal_1/thum_128.png"></a>
     <a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/circle_pointer"><img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/circle_pointer/thum_128.png"></a>
     <a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/the_canvas"><img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/the_canvas/thum_128.png"></a>
+    <a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/sections"><img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/sections/thum_128.png"></a>
+    <a href="https://github.com/stintosestudios/forFrame_collection_1_0_42/tree/master/projects/chicken"><img src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_0_42/master/projects/chicken/thum_128.png"></a>
 
 </div>
 
